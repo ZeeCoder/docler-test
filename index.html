@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Docler Chat Test - Viktor Hubert</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/Chat.css" />
+    <link rel="stylesheet" href="src/components/ChatMessage.css" />
+  </head>
+  <body>
+    <div class="Chat">
+      <div class="Chat__messages" id="Chat__messages"></div>
+      <div id="Chat__error" class="Chat__error"></div>
+      <form class="Chat__controls" id="Chat__controls">
+        <input
+          id="Chat__username-input"
+          class="Chat__username-input"
+          type="text"
+          placeholder="Username (Guest)"
+          disabled
+        />
+        <div class="Chat__submission-wrapper">
+          <!-- This could ben a textarea too, if we wanted to encourage longer messages with newline support. -->
+          <input
+            id="Chat__message-input"
+            class="Chat__message-input"
+            type="text"
+            placeholder="Your message"
+            disabled
+          />
+        </div>
+        <button
+          id="Chat__submit-button"
+          class="Chat__submit-button"
+          type="submit"
+          disabled
+        >
+          Send
+        </button>
+      </form>
+    </div>
+    <script src="https://unpkg.com/socket.io-client@2.2.0/dist/socket.io.slim.js"></script>
+    <script type="module" src="src/entry.js"></script>
+  </body>
+</html>

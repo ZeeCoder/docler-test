@@ -1,0 +1,24 @@
+/*
+ "Component" level styling, using the BEM methodology.
+ See: https://medium.com/@ZeeCoder/a-practical-introduction-to-the-bem-css-methodology-eeef578bac8c
+ */
+.ChatMessage {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.ChatMessage--me {
+  text-align: right;
+}
+
+.ChatMessage__user {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.ChatMessage__user::after {
+  content: ":";
+}
+
+.ChatMessage__message {
+}
